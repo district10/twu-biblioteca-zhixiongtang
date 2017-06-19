@@ -53,7 +53,9 @@ public class Book {
     public static void printAllBooks(String header) {
         System.out.println(header);
         for (int i = 0; i < books.size(); i++) {
-            System.out.println(String.format("%6d. %s", i, books.get(i)));
+            if (books.get(i).isAvailable) {
+                System.out.println(String.format("%6d. %s", i, books.get(i)));
+            }
         }
     }
 
